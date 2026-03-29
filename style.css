@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: linear-gradient(135deg, #fff5f9, #ffffff);
+  color: #444;
+  scroll-behavior: smooth;
+  padding-top: 70px;
+}
+
+/* หัวข้อทั้งหมด */
+h1, h2, h3, .logo {
+  font-family: "Fredoka", sans-serif;
+}
+/* ===== HEADER ===== */
+/* ===== FIX HEADER LAYOUT ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 40px;
+
+  background: linear-gradient(90deg, #e27da9, #ffe6f0);
+  border-bottom: 1px solid #ffd6e7;
+}
+
+/* จัดเมนูให้อยู่แนวนอน */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+/* เอา bullet จุดออก */
+.nav-links li {
+  list-style: none;
+}
+
+/* จัดปุ่มขวา */
+.nav-actions {
+  display: flex;
+  align-items: right;
+}
+.nav-links a {
+  text-decoration: none; /* ❌ เอาขีดล่างออก */
+  color: #d01167;
+
+  font-family: "Quicksand", sans-serif; /* ใช้ฟอนต์เดียวกัน */
+  font-weight: 500;
+  font-size: 0.95rem;
+
+  transition: 0.3s;
+}
+
+.logo img {
+  height: 40px;   /* ปรับขนาดได้ */
+  width: auto;
+  display: block;
+}
+
+/* hover นิด ๆ ให้ดูมีชีวิต */
+.logo img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+/* hover */
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+/* active (ตอนอยู่ section นั้น) */
+.nav-link.active {
+  color: #ff2e7a;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.btn-download {
+  background: #ff6fa5;
+  color: white;
+
+  font-family: "Quicksand", sans-serif; /* ฟอนต์เดียวกัน */
+  font-weight: 500;
+  font-size: 0.95rem;
+
+  border: none;
+  border-radius: 20px;
+  padding: 8px 18px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btn-download:hover {
+  opacity: 0.8;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.btn-download {
+  background: linear-gradient(135deg, #ff7eb3, #ff4d94);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(255, 77, 148, 0.4);
+  transition: 0.3s;
+}
+
+.btn-download:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 77, 148, 0.6);
+}
+/* ===== SECTION HIGHLIGHT ===== */
+.section-highlight {
+  animation: highlight 0.6s ease;
+}
+.nav-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #ff2e7a;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+@keyframes highlight {
+  0% {
+    background: rgba(255, 105, 180, 0.2);
+  }
+  100% {
+    background: transparent;
+  }
+}
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px 40px;
+}
+
+
+section {
+  position: relative;
+  z-index: 1;
+
+  scroll-margin-top: 90px; /* ปรับตามความสูง navbar */
+}
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(135deg, #fff0f6, #ffffff);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* TEXT */
+.hero-text h1 {
+  font-size: 3.2rem;
+  color: #e75480;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* BUTTON */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff7eb3, #ff4d94);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: none;
+}
+
+.btn-outline {
+  border: 2px solid #ff4d94;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: transparent;
+  color: #ff4d94;
+}
+
+
+/* ===== GRID ===== */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ===== GALLERY ===== */
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ===== VIDEO ===== */
+.video-box {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #e75480;
+  color: white;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: none;
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  font-family: "Fredoka";
+  font-size: 2.8rem;
+  color: #e75480;
+  margin-bottom: 40px;
+}
+
+/* ===== CONCEPT ===== */
+.concept-box {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 25px;
+  border: 1px solid #ffe0ec;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.concept-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.concept-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #fff5f9;
+  border-top: 1px solid #ffe0ec;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.footer h3, .footer h4 {
+  color: #e75480;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ===== SCROLL ANIMATION ===== */
+/* ===== SCROLL ANIMATION ===== */
+
+/* fade + slide */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.7s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* zoom */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.6s ease;
+}
+
+.zoom-in.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* slide ซ้าย */
+.slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.7s ease;
+}
+
+.slide-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* ===== SCREENSHOT STYLE ===== */
+.screenshot {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+
+  border: 3px solid #ff6fa5; /* กรอบชมพู */
+  background: white;
+
+  transition: all 0.3s ease;
+}
+
+/* รูป */
+.screenshot img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+/* ===== เอียงแบบในรูป ===== */
+.tilt-left {
+  transform: rotate(-2deg);
+}
+
+.tilt-right {
+  transform: rotate(2deg);
+}
+
+/* ===== HOVER ===== */
+.screenshot:hover {
+  transform: scale(1.05) rotate(0deg); /* เด้ง + ตรง */
+  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+}
+
+/* zoom รูป */
+.screenshot:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== OVERLAY ===== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+
+  display: flex;
+  align-items: flex-end;
+  padding: 15px;
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.screenshot:hover .overlay {
+  opacity: 1;
+}
+
+/* text มุมซ้ายล่าง */
+.overlay p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+
+.screenshot:hover .overlay p {
+  transform: translateY(0);
+}
+/* ===== GAMEPLAY GRID ===== */
+.gameplay-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.gameplay-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+/* GIF */
+.gameplay-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.gameplay-card p {
+  padding: 12px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* HOVER */
+.gameplay-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 105, 180, 0.3);
+}
+/* ===== HERO FULL BACKGROUND ===== */
+.hero-full {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* background layer */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: opacity 1.2s ease-in-out;
+  opacity: 0;
+}
+
+/* active รูปที่กำลังแสดง */
+.hero-bg.active {
+  opacity: 1;
+}
+
+/* overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    
+    rgb(255, 255, 255),
+    rgba(255, 240, 246, 0.025)
+  );
+
+
+  z-index: 2;
+}
+
+/* content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+    margin-top: 200px; 
+}
+
+/* text */
+.hero-text h1 {
+  font-size: 3.5rem;
+  color: #e75480;
+}
+
+.hero-text p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ===== PLATFORM BUTTON ===== */
+.platform-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.platform-btn img {
+  height: 55px;
+  transition: 0.3s;
+}
+
+/* hover */
+.platform-btn:hover img {
+  transform: scale(1.08);
+}
+
+.download-btn-wrapper {
+  margin-top: 20px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #ff52b4, #ffa8de);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 158, 203, 0.4);
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 158, 203, 0.6);
+}
+.play-btn.hide {
+  opacity: 0;
+  pointer-events: none; /* สำคัญ! */
+  transition: 0.3s;
+}
+/* ===== animation ขึ้นลงเท่านั้น ===== */
+@keyframes bounceY {
+  0% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(8px);
+  }
+  100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+}
+/* ===== MOBILE NAVBAR FIX ===== */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  /* ลดขนาดโลโก้ */
+  .logo img {
+    height: 30px;
+  }
+
+  /* จัด layout เป็น column */
+  .nav-right {
+    width: 100%;
+  }
+
+  /* เมนูเรียง + เว้นระยะพอดี */
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+}
+@keyframes zoomBg {
+  from { background-size: 100%; }
+  to { background-size: 110%; }
+}
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px){
+  .hero { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .concept-box { grid-template-columns: 1fr; }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}@media(max-width: 768px){
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+@media(max-width: 768px){
+  .gameplay-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

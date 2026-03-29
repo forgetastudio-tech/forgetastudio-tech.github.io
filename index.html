@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WithBonnie</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <a href="#" class="logo">
+    <img src="Image/WithBonnie.png" alt="WithBonnie Logo">
+  </a>
+
+  <!-- RIGHT -->
+  <div class="nav-right">
+
+    <ul class="nav-links">
+      <li><a href="#concept-detail">Concept</a></li>
+      <li><a href="#gameplay">Gameplay</a></li>
+      <li><a href="#gallery">Screenshots</a></li>
+      <li><a href="#video">Trailer</a></li>
+    </ul>
+
+  </div>
+
+</nav>
+<section class="hero-full">
+<div class="hero-bg" id="bg1"></div>
+  <div class="hero-bg" id="bg2"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    
+    <div class="hero-text">
+      <h1>Dreamy Life<br>With Bonnie</h1>
+
+      <p>
+        A cozy open-world adventure where you explore, deliver items,
+        and manage your own little shop.
+      </p>
+
+<div class="platform-buttons">
+
+  <a href="#" class="platform-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Steam_icon_logo.svg/960px-Steam_icon_logo.svg.png">
+  </a>
+
+  <a href="#" class="platform-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Electronic-Arts-Logo.svg">
+  </a>
+    <a href="#" class="platform-btn">
+    <img src="https://images.icon-icons.com/2407/PNG/512/itch_icon_146025.png">
+  </a>
+
+</div>
+<div class="download-btn-wrapper">
+  <a href="https://drive.google.com/drive/folders/1uPCd5BAoVARnq8-p-nYBBghb0na_3SCI?usp=sharing" class="download-btn" target="_blank">
+    Download Game
+  </a>
+</div>
+    </div>
+
+  </div>
+  
+</section>
+
+<!-- CONCEPT SECTION -->
+<section id="concept-detail" class="fade-up">
+
+  <div class="container">
+    <h2 class="section-title">Concept</h2>
+
+    <div class="concept-box">
+      
+      <div class="concept-text">
+        <p>
+          WithBonnie is an open-world game that takes players on a journey with Bonnie 
+          through a fantasy world with diverse locations and themes, where players can 
+          deliver items to people in various towns, allowing them to explore and get to 
+          know the characters in each town.
+        </p>
+      </div>
+      <div class="concept-image">
+        <img src="Image/Screenshot6.png">
+      </div>
+
+    </div>
+  </div>
+
+
+</section>
+
+<!-- GAMEPLAY -->
+<section id="gameplay" class="fade-up">
+  <div class="container">
+    
+    <h2 class="section-title">Gameplay</h2>
+
+    <div class="gameplay-grid">
+
+      <!-- CARD 1 -->
+      <div class="gameplay-card">
+        <img src="/Image/Packing.gif" alt="Packing">
+        <p>Packing items for delivery</p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="gameplay-card">
+        <img src="/Image/Explore.gif" alt="Exploring">
+        <p>Explore beautiful locations</p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="gameplay-card">
+        <img src="/Image/Sending.gif" alt="Delivering">
+        <p>Deliver items to characters</p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="gameplay-card">
+        <img src="/Image/Shopping.gif" alt="Reward">
+        <p>Earn rewards and progress</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- GALLERY -->
+<section id="gallery" class="zoom-in">
+  <div class="container gallery">
+   <h2 class="section-title">Screenshots</h2>
+
+    <div class="grid-2">
+<div class="screenshot tilt-left">
+  <img src="Image/Screenshot1.png">
+
+  <div class="overlay">
+    <p>Village</p>
+  </div>
+</div>
+<div class="screenshot tilt-right">
+  <img src="Image/Screenshot2.png">
+
+  <div class="overlay">
+    <p>Village</p>
+  </div>
+</div>
+<div class="screenshot tilt-left">
+  <img src="Image/Screenshot3.png">
+
+  <div class="overlay">
+    <p>Forset</p>
+  </div>
+</div>
+<div class="screenshot tilt-right">
+  <img src="Image/Screenshot4.png">
+
+  <div class="overlay">
+    <p>Forset</p>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video" class="zoom-in">
+  <div class="container">
+    <h2 class="section-title">Trailer</h2>
+
+    <div class="video-box">
+      <button class="play-btn" onclick="playVideo()">▶</button>
+
+      <iframe id="videoFrame"
+        width="100%" height="100%"
+        src=""
+        frameborder="0"
+        allowfullscreen
+        style="display:none;">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-content">
+
+    <div class="footer-left">
+      <h3>WithBonnie</h3>
+      <p>Cozy open-world delivery adventure</p>
+    </div>
+
+    <div class="footer-center">
+      <h4>Credits</h4>
+      <p>Game Design : Phutawan</p>
+      <p>Art & Animation : Rosarin , Ratthaphom</p>
+      <p>Programming : Pimonput</p>
+
+    </div>
+
+    <div class="footer-right">
+      <h4>Contact</h4>
+      <p>Email: Getastudio@gmail.com</p>
+      <p>© 2026 WithBonnie</p>
+    </div>
+
+  </div>
+</footer>
+</html>
