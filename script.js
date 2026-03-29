@@ -70,9 +70,9 @@ elements.forEach(el => observer.observe(el));
 
 // ===== HERO BACKGROUND FADE =====
 const images = [
-  "image/Screenshot1.png",
-  "image/Screenshot2.png",
-  "image/Screenshot3.png"
+  "Image/Screenshot1.png",
+  "Image/Screenshot2.png",
+  "Image/Screenshot3.png"
 ];
 
 let index = 0;
